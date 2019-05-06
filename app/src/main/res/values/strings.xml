@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">VLSM Subnet Calculator</string>
+    <string name="setting_title">Dirección de red IPv4</string>
+    <string name="confirm_title">Estas seguro de eliminar los datos?</string>
+    <string name="confirm_positive">Eliminar</string>
+    <string name="confirm_negative">Cancelar</string>
+    <string name="dot">.</string>
+    <string name="hint_192">192</string>
+    <string name="hint_168">168</string>
+    <string name="hint_1">1</string>
+    <string name="hint_0">0</string>
+    <string name="hint_24">24</string>
+    <string name="slash">/</string>
+    <string name="network_config">Configurar redes</string>
+    <string name="add">Agregar</string>
+    <string name="calculate">Calcular</string>
+    <string name="subnets">Hosts por subredes</string>
+    <string name="network_size">Tamaño de subred:</string>
+    <string name="title_activity_result">ResultActivity</string>
+    <string name="completeIP">IP incompleta</string>
+
+</resources>

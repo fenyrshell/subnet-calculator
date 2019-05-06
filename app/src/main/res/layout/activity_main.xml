@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textViewHeader"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="@string/setting_title" />
+
+        <Button
+            android:id="@+id/button_delete"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:background="@android:drawable/ic_menu_delete"
+            android:onClick="clearData" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ip_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/editTextOctetOne"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:hint="@string/hint_192"
+            android:inputType="number"
+            android:maxLength="3"
+            android:nextFocusDown="@id/editTextOctetTwo" />
+
+        <TextView
+            android:id="@+id/textViewDotOne"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:paddingBottom="4dp"
+            android:text="@string/dot" />
+
+        <EditText
+            android:id="@+id/editTextOctetTwo"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:hint="@string/hint_168"
+            android:inputType="number"
+            android:maxLength="3"
+            android:nextFocusDown="@id/editTextOctetThree" />
+
+        <TextView
+            android:id="@+id/textViewDotTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:paddingBottom="4dp"
+            android:text="@string/dot" />
+
+        <EditText
+            android:id="@+id/editTextOctetThree"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:hint="@string/hint_1"
+            android:inputType="number"
+            android:maxLength="3"
+            android:nextFocusDown="@id/editTextOctetFour" />
+
+        <TextView
+            android:id="@+id/textViewDotThree"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:paddingBottom="4dp"
+            android:text="@string/dot" />
+
+        <EditText
+            android:id="@+id/editTextOctetFour"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:hint="@string/hint_0"
+            android:inputType="number"
+            android:maxLength="3"
+            android:nextFocusDown="@id/editTextMask" />
+
+        <TextView
+            android:id="@+id/textViewSlash"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:paddingBottom="4dp"
+            android:text="@string/slash"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/editTextMask"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:hint="@string/hint_24"
+            android:inputType="number"
+            android:maxLength="2" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewNetworkConfig"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/network_config" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/network_size" />
+
+        <EditText
+            android:id="@+id/editTextNetworkSize"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="number"
+            android:maxLength="10" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="addSubnet"
+            android:text="@string/add" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/subnets" />
+
+    <ListView
+        android:id="@+id/listViewSubnets"
+        android:layout_width="match_parent"
+        android:layout_height="341dp">
+
+    </ListView>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:onClick="calculate"
+        android:text="@string/calculate" />
+
+</LinearLayout>
